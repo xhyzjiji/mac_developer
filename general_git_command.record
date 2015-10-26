@@ -1,0 +1,16 @@
+git add <file>：将工作区改动添加到暂存区，<file>可用通配符表示多个文件或者是文件列表
+git commit -m "<comment>"：将暂存区内容添加到版本库
+git status：可以查看操作提示
+git log --oneline --graph --decorate：当前活动分支HEAD下的树遍历结果
+git merge <branch>：当前处于的分支合并参数<branch>指示分支
+git fetch：更新远程分支点origin/master
+git fetch <remote> <branch1>:<branch2>：更新远程分支remote/branch1到新建的本地分支branch2中
+git fetch <remote> <branch1>：更新远程分支remote/branch1
+git pull：==git fetch; git checkout master; git merge origin/master
+git pull <remote> <branch1>:<branch2>：==git fetch <remote> <branch1>; git checkout <branch2>; git merge <remote>/<branch1>
+git pull <remote> <branch1>：更新远程分支<remote>/<branch1>，如果不存在这个远程分支，则创建之
+git branch <branch_name>：创建一个分支名为<branch_name>
+git branch -rm <branch1>：删除一个分支
+git rebase：一般先git fetch后进行git rebase，自己的commit信息会自动加到HEAD之上，分支路径变为一条支线，如果遇到冲突，则修改冲突文件后先进行git add然后进行git rebase --continue
+git branch -av：查看所有分支，包括远程分支
+
