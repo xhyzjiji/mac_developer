@@ -13,4 +13,5 @@ git branch <branch_name>：创建一个分支名为<branch_name>
 git branch -rm <branch1>：删除一个分支
 git rebase：一般先git fetch后进行git rebase，自己的commit信息会自动加到HEAD之上，分支路径变为一条支线，如果遇到冲突，则修改冲突文件后先进行git add然后进行git rebase --continue
 git branch -av：查看所有分支，包括远程分支
-
+git am：
+git 
