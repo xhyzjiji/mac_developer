@@ -1,0 +1,27 @@
+新安装的mysql，默认有root用户名和空密码
++--------------------------------+------+----------+
+| Host                           | User | Password |
++--------------------------------+------+----------+
+| localhost                      | root |          |
+| panyongfengdemacbook-pro.local | root |          |
+| 127.0.0.1                      | root |          |
+| ::1                            | root |          |
+| localhost                      |      |          |
+| panyongfengdemacbook-pro.local |      |          |
++--------------------------------+------+----------+
+上面查看mysql的用户和密码命令如下
+> use mysql;
+> select Host,User,Password;
+名为mysql的数据库是记录用户和密码信息的！！！
+
+进入本地数据库
+$ mysql -hlocalhost -uroot -p，然后会提示输入密码，默认为空，直接回车即可
+> use <要操作的数据库名>，即可进入相应数据库
+
+关于导出远程数据库并将其导入本地数据库
+导出远程数据库：
+$ mysql -h<远程主机ip> -u<数据库用户名> -p<数据库密码> <数据库名> > <导出到的文件名>
+导入数据库：
+> create database <新的数据库名>
+> use <新的数据库名>
+> source <需要导入的数据库>
