@@ -7,4 +7,9 @@
 esc模式下按u		撤销修改undo
 esc模式下按ctrl+r	redo
 :a,bs/../../g		a,b为行号，/../..为原内容和文件内容
-
+(normal)zt			将当前行移至窗口首行
+(normal)zz			将当前行移至窗口中间
+(normal)zb			将当前行移至窗口尾行
+:a,b co c			将a到b行内容复制并粘贴到c行
+:a,b m c			将a到b行内容剪切并粘贴到c行
+:a,b de				将a到b行内容删除
